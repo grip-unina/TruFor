@@ -1,7 +1,7 @@
 ---
 layout: paper
-paper: ID-Reveal Identity-aware DeepFake Video Detection
-github_url: https://github.com/grip-unina/id-reveal
+paper: TruFor@colon; Leveraging all-round clues for trustworthy image forgery detection and localization
+github_url: https://github.com/grip-unina/TruFor
 authors:  
   - name: Fabrizio Guillaro
     link: https://www.grip.unina.it/members/guillaro
