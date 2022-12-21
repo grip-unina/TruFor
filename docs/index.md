@@ -25,7 +25,7 @@ affiliations:
     index: 2
 links:
     arxiv: 
-    code: https://github.com/grip-unina/TruFor
+    code (Coming Soon): https://github.com/grip-unina/TruFor
 ---
 
 <!-- <center><img src="./header.jpg" alt="header" height="200" /></center> -->
@@ -35,11 +35,6 @@ In this paper we present TruFor, a forensic framework that can be applied to a l
 
 <!-- *   2022-12-21: Paper is uploaded on arXiv -->
 
-## Links
-
-https://github.com/grip-unina/TruFor
-
-## Requirements
 
 ## Bibtex
 <!-- 
