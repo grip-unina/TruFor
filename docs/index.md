@@ -8,16 +8,16 @@ authors:
     index: 1
   - name: Davide Cozzolino
     link: https://www.grip.unina.it/members/cozzolino
-    index: 2
+    index: 1
   - name: Avneesh Sud
     link: 
-    index: 3
+    index: 2
   - name: Nicholas Dufour
     link: 
-    index: 4
+    index: 2
   - name: Luisa Verdoliva
     link: https://www.grip.unina.it/members/verdoliva
-    index: 5
+    index: 1
 affiliations: 
   - name: University Federico II of Naples, Italy
     index: 1
