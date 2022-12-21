@@ -1,6 +1,6 @@
 ---
 layout: paper
-paper: TruFor@colon; Leveraging all-round clues for trustworthy image forgery detection and localization
+paper: TruFor&colon; Leveraging all-round clues for trustworthy image forgery detection and localization
 github_url: https://github.com/grip-unina/TruFor
 authors:  
   - name: Fabrizio Guillaro
