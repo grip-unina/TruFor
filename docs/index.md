@@ -47,7 +47,12 @@ In this paper we present TruFor, a forensic framework that can be applied to a l
 }
 ```
  -->
+  
+## Acknowledgments
  
- ## License
- 
- ## Acknowledgments
+We gratefully acknowledge the support of this research by the Defense Advanced Research Projects Agency (DARPA) under agreement number FA8750-20-2-1004. 
+The U.S. Government is authorized to reproduce and distribute reprints for Governmental purposes notwithstanding any copyright notation thereon.
+The views and conclusions contained herein are those of the authors and should not be interpreted as necessarily representing the official policies or endorsements, either expressed or implied, of DARPA or the U.S. Government.
+
+In addition, this work has received funding by the European Union under the Horizon Europe vera.ai project, Grant Agreement number 101070093, and is supported by Google and by the PREMIER project, funded by the Italian Ministry of Education, University, and Research within the PRIN 2017 program.
+Finally, we would like to thank Chris Bregler for useful discussions and support.
