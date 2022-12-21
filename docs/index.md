@@ -37,7 +37,7 @@ In this paper we present TruFor, a forensic framework that can be applied to a l
 
 ## Links
 
-https://grip-unina.github.io/TruFor
+https://github.com/grip-unina/TruFor
 
 ## Requirements
 
