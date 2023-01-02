@@ -13,11 +13,27 @@ In this paper we present TruFor, a forensic framework that can be applied to a l
 
 ## Links
 
-[Page](https://grip-unina.github.io/TruFor) 
+[Page](https://grip-unina.github.io/TruFor)            
+[arXiv](https://doi.org/10.48550/arXiv.2212.10957)
 
 ## Requirements
 
 ## License
+
+## Bibtex
+ 
+ ```
+ @misc{Guillaro2022_trufor,
+  doi = {10.48550/ARXIV.2212.10957},  
+  url = {https://arxiv.org/abs/2212.10957},
+  author = {Guillaro, Fabrizio and Cozzolino, Davide and Sud, Avneesh and Dufour, Nicholas and Verdoliva, Luisa},
+  keywords = {Computer Vision and Pattern Recognition (cs.CV), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  title = {TruFor: Leveraging all-round clues for trustworthy image forgery detection and localization},
+  publisher = {arXiv},
+  year = {2022},
+  copyright = {arXiv.org perpetual, non-exclusive license}
+}
+```
 
 ## Acknowledgments
  
