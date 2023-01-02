@@ -24,7 +24,7 @@ affiliations:
   - name: Google AI
     index: 2
 links:
-    arxiv: 
+    arxiv: https://doi.org/10.48550/arXiv.2212.10957
     code Coming Soon: https://github.com/grip-unina/TruFor
 ---
 
