@@ -25,7 +25,7 @@ affiliations:
     index: 2
 links:
     arxiv: https://doi.org/10.48550/arXiv.2212.10957
-    code Coming Soon: https://github.com/grip-unina/TruFor
+    code: https://github.com/grip-unina/TruFor
 ---
 
 <!-- <center><img src="./header.jpg" alt="header" height="200" /></center> -->
