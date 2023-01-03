@@ -1,8 +1,4 @@
 # TruFor
-
-![Python 3.7](https://img.shields.io/badge/python-3.6-green.svg?style=plastic)
-![PyTorch 1.11](https://img.shields.io/badge/PyTorch-1.11-green.svg?style=plastic)
-
 Official PyTorch implementation of the paper "TruFor: Leveraging all-round clues for trustworthy image forgery detection and localization"
 
 <p align="center">
@@ -27,6 +23,10 @@ In this paper we present **TruFor**, a forensic framework that can be applied to
 [arXiv](https://doi.org/10.48550/arXiv.2212.10957)
 
 ## Requirements
+![Python](https://img.shields.io/badge/python-3.6-green.svg?style=plastic)
+![PyTorch](https://img.shields.io/badge/PyTorch-1.11-green.svg?style=plastic)
+![Pillow](https://img.shields.io/badge/Pillow-9.0.1-green.svg?style=plastic)
+![OpenCV](https://img.shields.io/badge/OpenCV-4.4-green.svg?style=plastic)
 
 ## License
 
