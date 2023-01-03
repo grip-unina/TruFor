@@ -16,7 +16,7 @@ In this paper we present **TruFor**, a forensic framework that can be applied to
 ![Architecture](./docs/architecture.png)
 
 <p align="center">
- <img src="./docs/examples.png" alt="teaser" width="80%" />
+ <img src="./docs/examples.png" alt="examples" width="80%" />
 </p>
 
 ## Code: Coming Soon
