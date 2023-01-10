@@ -1,4 +1,4 @@
-remote_theme: grip-unina/webtemplatek
+remote_theme: grip-unina/webtemplate
 plugins:
   - jekyll
   - jekyll-seo-tag
