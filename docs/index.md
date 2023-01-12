@@ -39,7 +39,6 @@ In this paper we present **TruFor**, a forensic framework that can be applied to
 
 *   2022-12-21: Paper has been uploaded on arXiv
 
-
 ## Bibtex
 <!-- 
 ```
