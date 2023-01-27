@@ -1,10 +1,12 @@
 # TruFor
 
 
+
 [![TruFor](https://img.shields.io/badge/TruFor%20webpage-222222.svg?style=for-the-badge&logo=github)](https://grip-unina.github.io/TruFor)
 [![arXiv](https://img.shields.io/badge/-arXiv-B31B1B.svg?style=for-the-badge)](https://doi.org/10.48550/arXiv.2212.10957)
 [![GRIP](https://img.shields.io/badge/-GRIP-0888ef.svg?style=for-the-badge)](https://www.grip.unina.it)
 
+## (Code Coming Soon)
 Official PyTorch implementation of the paper "TruFor: Leveraging all-round clues for trustworthy image forgery detection and localization"
 
 <p align="center">
@@ -21,7 +23,6 @@ In this paper we present **TruFor**, a forensic framework that can be applied to
  <img src="./docs/examples.png" alt="examples" width="80%" />
 </p>
 
-## Code: Coming Soon
 
 
 ## Requirements
