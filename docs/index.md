@@ -21,11 +21,11 @@ authors:
 affiliations: 
   - name: University Federico II of Naples, Italy
     index: 1
-  - name: Google AI
+  - name: Google Research
     index: 2
 links:
     arxiv: https://doi.org/10.48550/arXiv.2212.10957
-    code: https://github.com/grip-unina/TruFor
+    "code (Coming Soon)": https://github.com/grip-unina/TruFor
 ---
   
 <center><img src="./teaser.png" alt="teaser" width="70%" /></center>
