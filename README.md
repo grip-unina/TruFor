@@ -10,7 +10,7 @@
 Official PyTorch implementation of the paper "TruFor: Leveraging all-round clues for trustworthy image forgery detection and localization"
 
 <p align="center">
- <img src="./docs/teaser.svg" alt="teaser" width="70%" />
+ <img src="./docs/teaser.png" alt="teaser" width="70%" />
 </p>
  
  
