@@ -40,20 +40,10 @@ In this paper we present **TruFor**, a forensic framework that can be applied to
 
 ## News
 
+*   2023-02-27: Paper has been accepted at CVPR 2023
 *   2022-12-21: Paper has been uploaded on arXiv
 
 ## Bibtex
-<!-- 
-```
-@article{Guillaro2022_trufor,
-  title={},
-  author={},
-  journal={arXiv preprint arXiv:},
-  year={2022}
-}
-```
- -->
- 
  
  ```
  @misc{Guillaro2022_trufor,
