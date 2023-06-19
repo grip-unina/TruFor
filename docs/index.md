@@ -29,14 +29,41 @@ affiliations:
 [![arXiv](https://img.shields.io/badge/-arXiv-B31B1B.svg?style=for-the-badge)](https://doi.org/10.48550/arXiv.2212.10957)
 [![GRIP](https://img.shields.io/badge/-GRIP-0888ef.svg?style=for-the-badge)](https://www.grip.unina.it)
 
-  
-  
+
 <center><img src="./teaser.png" alt="teaser" width="70%" /></center>
 
-In this paper we present **TruFor**, a forensic framework that can be applied to a large variety of image manipulation methods, from classic cheapfakes to more recent manipulations based on deep learning. We rely on the extraction of both high-level and low-level traces through a transformer-based fusion architecture that combines the RGB image and a learned noise-sensitive fingerprint. The latter learns to embed the artifacts related to the camera internal and external processing by training only on real data in a self-supervised manner. Forgeries are detected as deviations from the expected regular pattern that characterizes each pristine image. Looking for anomalies makes the approach able to robustly detect a variety of local manipulations, ensuring generalization. In addition to a pixel-level **localization map** and a whole-image **integrity score**, our approach outputs a **reliability map** that highlights areas where localization predictions may be error-prone. This is particularly important in forensic applications in order to reduce false alarms and allow for a large scale analysis. Extensive experiments on several datasets show that our method is able to reliably detect and localize both cheapfakes and deepfakes manipulations outperforming state-of-the-art works.
+**TruFor** is a forensic framework that can be applied to a large variety of image manipulation methods, from classic cheapfakes to more recent manipulations based on deep learning. We rely on the extraction of both high-level and low-level traces through a transformer-based fusion architecture that combines the RGB image and a learned noise-sensitive fingerprint. The latter learns to embed the artifacts related to the camera internal and external processing by training only on real data in a self-supervised manner. Forgeries are detected as deviations from the expected regular pattern that characterizes each pristine image. Looking for anomalies makes the approach able to robustly detect a variety of local manipulations, ensuring generalization. In addition to a pixel-level **localization map** and a whole-image **integrity score**, our approach outputs a **reliability map** that highlights areas where localization predictions may be error-prone. This is particularly important in forensic applications in order to reduce false alarms and allow for a large scale analysis. Extensive experiments on several datasets show that our method is able to reliably detect and localize both cheapfakes and deepfakes manipulations outperforming state-of-the-art works.
 
-<center> <img src="./architecture.png" alt="architecture"/> </center>
-<center> <img src="./examples.png" alt="examples" width="80%" /> </center>
+The training is divided into three separate phases:
+<center> <img src="./phases.png" alt="architecture" width="80%"/> </center>
+
+## Architecture
+
+<center> <img src="./architecture.png" alt="architecture" width="80%" /> </center>
+
+We cast the forgery localization task as a supervised binary segmentation problem, combining high-level (**RGB**) and low-level (**Noiseprint++**) features using a cross-modal framework.
+
+## Noiseprint++
+
+**Noiseprint++** is a learned noise residual. It is an improvement of our previous work [Noiseprint](https://grip-unina.github.io/noiseprint/). It can e seen as a fingerprint that captures traces related to the camera model and the editing history of the image.
+When an image is forged, the Noiseprint++ enhances inconsistencies between authentic and tampered regions.
+<center> <img src="./noiseprint_pp.png" alt="examples" width="80%" /> </center>
+
+The Noiseprint++ extractor is trained using only pristine images and with a self-supervised approach. The distance between the Noiseprints of patches coming from different camera models, different positions, or with a different editing history is maximized, otherwise is minimized.
+<center> <img src="./noiseprint_training.png" alt="examples" width="80%" /> </center>
+
+## Confidence
+
+To reduce the impact of false alarms, we estimate a confidence map using TCP as a confidence criterion.
+
+<center> <img src="./confidence.png" alt="architecture" width="80%" /> </center>
+
+## Qualitative results
+
+Errors in the anomaly map are corrected by the confidence map, drastically improving the final detection score.
+
+<center> <img src="./qualitative_conf.png" alt="examples" width="80%" /> </center>
+<center> <img src="./qualitative.png" alt="examples" width="80%" /> </center>
 
 ## News
 
