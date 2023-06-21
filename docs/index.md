@@ -49,9 +49,6 @@ We cast the forgery localization task as a supervised binary segmentation proble
 When an image is forged, the Noiseprint++ enhances inconsistencies between authentic and tampered regions.
 <center> <img src="./noiseprint_pp.png" alt="examples" width="80%" /> </center>
 
-The Noiseprint++ extractor is trained using only pristine images and with a self-supervised approach. The distance between the Noiseprints of patches coming from different camera models, different positions, or with a different editing history is maximized, otherwise is minimized.
-<center> <img src="./noiseprint_training.png" alt="examples" width="80%" /> </center>
-
 ## Confidence
 
 To reduce the impact of false alarms, we estimate a confidence map using TCP as a confidence criterion.
