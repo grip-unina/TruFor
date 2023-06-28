@@ -64,21 +64,20 @@ Errors in the anomaly map are corrected by the confidence map, drastically impro
 
 ## News
 
+*   2023-06-28: Test code is now available
 *   2023-02-27: Paper has been accepted at CVPR 2023
 *   2022-12-21: Paper has been uploaded on arXiv
 
 ## Bibtex
  
  ```
- @misc{Guillaro2022_trufor,
-  doi = {10.48550/ARXIV.2212.10957},  
-  url = {https://arxiv.org/abs/2212.10957},
-  author = {Guillaro, Fabrizio and Cozzolino, Davide and Sud, Avneesh and Dufour, Nicholas and Verdoliva, Luisa},
-  keywords = {Computer Vision and Pattern Recognition (cs.CV), FOS: Computer and information sciences, FOS: Computer and information sciences},
-  title = {TruFor: Leveraging all-round clues for trustworthy image forgery detection and localization},
-  publisher = {arXiv},
-  year = {2022},
-  copyright = {arXiv.org perpetual, non-exclusive license}
+@InProceedings{Guillaro_2023_CVPR,
+    author    = {Guillaro, Fabrizio and Cozzolino, Davide and Sud, Avneesh and Dufour, Nicholas and Verdoliva, Luisa},
+    title     = {TruFor: Leveraging All-Round Clues for Trustworthy Image Forgery Detection and Localization},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2023},
+    pages     = {20606-20615}
 }
 ```
 
