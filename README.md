@@ -4,7 +4,6 @@
 [![arXiv](https://img.shields.io/badge/-arXiv-B31B1B.svg?style=for-the-badge)](https://doi.org/10.48550/arXiv.2212.10957)
 [![GRIP](https://img.shields.io/badge/-GRIP-0888ef.svg?style=for-the-badge)](https://www.grip.unina.it)
 
-## (Test Code Coming in June!)
 Official PyTorch implementation of the paper "TruFor: Leveraging all-round clues for trustworthy image forgery detection and localization"
 
 <p align="center">
@@ -52,7 +51,7 @@ bash docker_run.sh
 You can change the following parameters in docker_run.sh:
 - *-gpu*: default is gpu '0'. Put '-1' if you want to use cpu.
 - *-in*:  default is "images/"
- is used and the input folder is "images/". Itcan be a single file (data/tampered1.png), a directory (data/)
+ is used and the input folder is "images/". It can be a single file (data/tampered1.png), a directory (data/) or a glob statement (data/*.png)
 - If you want to save the Noiseprint++ aswell, you can add the flag ```--save_np``` at the end of the command.
 
 The output is a .npz containing the following files:
@@ -81,8 +80,8 @@ Note that ```matplotlib``` and ```pillow``` packages are required to run this sc
 ## Metrics
 
 In the file ```metrics.py``` you can find the functions we used to compute the metrics. <br/>
-Localization metrics have to be computed only on fake images, and the ground truth has to be 0 for pristine pixels and 1 for forged pixels. <br/>
-When computing F1 score, we take the maximum between the F1 using the prediction and the F1 using the inverse of the prediction.
+Localization metrics have to be computed only on fake images, and the ground truth **has to be 0 for pristine pixels and 1 for forged pixels**. <br/>
+When computing F1 score, we take the maximum between the F1 using the localization map and the F1 using the inverse of the localization map.
 We do not consider pixels close to the borders of the forged area in the ground truth, since in most cases they are not accurate. 
 
 
