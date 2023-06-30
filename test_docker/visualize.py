@@ -47,7 +47,7 @@ if mask is not None:
 if noisepr is not None:
     index += 1
     ax = axs[index]
-    # for a better visualization of the noiseprint++, we remove the border and do a sampling
+    # for a better visualization of the noiseprint++, we remove the border and do a down-sampling (useful if the image is too big)
     ax.imshow(noisepr[16:-16:5, 16:-16:5], cmap='gray'), ax.set_title('Noiseprint++')
 
 index += 1
