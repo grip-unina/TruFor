@@ -71,8 +71,8 @@ Note: that the score values can slightly change when a different version of pyth
 Our advice is to visualize the Noiseprint++ like shown in the Visualization section of this readme. **Only for visualization**, we remove some of the borders (which are darker) and sample the Noiseprint++ (for a better visualization of the grid-like structure). For example, ```noisepr[16:-16:4, 16:-16:4]```<br/>
 Changing the step can change the visualization, as shown in the following figure:
 
-<center> <img src="./docs/np_visual1.png" alt="noiseprint++ visualization" width="80%" /> </center>
-<center> <img src="./docs/np_visual2.png" alt="noiseprint++ visualization" width="80%" /> </center>
+<center> <img src="./docs/np_visual1.png" alt="noiseprint++ visualization" width="100%" /> </center>
+<center> <img src="./docs/np_visual2.png" alt="noiseprint++ visualization" width="100%" /> </center>
 
 ## Visualization
 
