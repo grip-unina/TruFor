@@ -64,19 +64,9 @@ def computeMCC(FP, TP, FN, TN):
     TN = np.float64(TN)
     return np.abs(TP*TN - FP*FN) / np.maximum(np.sqrt((TP + FP)*(TP + FN)*(TN + FP)*(TN + FN) ), 1e-32)
 
+
 def computeF1(FP, TP, FN, TN):
     return 2*TP / np.maximum((2*TP + FN + FP), 1e-32)
-
-
-
-def calcolaMetriche_threshold(mapp, gt, th):
-    FP, TP, FN, TN  = computeMetrics_th(mapp, gt, th)
-
-    f1  = computeF1(FP, TP, FN, TN)
-    f1i = computeF1(TN, FN, TP, FP)
-    maxF1 = max(f1, f1i)
-    
-    return 0, maxF1, 0, 0, 0
 
 
 
@@ -127,22 +117,6 @@ def computeDetectionMetrics(scores, labels):
     
     return AUC, bACC
     
-    
-    
-    
-
-#path    = '/nas/big_folder/fabrizio.guillaro/outputs/PROVA_GITHUB_test/DSO-1/prova_test/'
-#gt_path = '/nas/cheapfakes_datasets/tame/DSO-1/DSO-1-Fake-Images-Masks/'
-
-path    = "/nas/homes/fabrizio.guillaro/algoritmi/forgery_detection/TruFor_git/TruFor/test_docker/output/tampered1.png.npz"
-print(np.load(path)['score_sigmoid'])
-path    = "/nas/homes/fabrizio.guillaro/algoritmi/forgery_detection/TruFor_git/TruFor/test_docker/output/tampered2.png.npz"
-print(np.load(path)['score_sigmoid'])
-path    = "/nas/homes/fabrizio.guillaro/algoritmi/forgery_detection/TruFor_git/TruFor/test_docker/output/pristine1.jpg.npz"
-print(np.load(path)['score_sigmoid'])
-path    = "/nas/homes/fabrizio.guillaro/algoritmi/forgery_detection/TruFor_git/TruFor/test_docker/output/pristine2.jpg.npz"
-print(np.load(path)['score_sigmoid'])
-
 
 
 
@@ -151,7 +125,6 @@ print(np.load(path)['score_sigmoid'])
 # ---------------------------------------------------------------------------- #
 '''
 path = '/path-to-DSO1-dataset/'
-path    = '/nas/big_folder/fabrizio.guillaro/outputs/PROVA_GITHUB_test/DSO-1/prova_test/'
 
 from glob import glob
 scores = []
@@ -174,8 +147,6 @@ print(computeDetectionMetrics(scores, labels))
 '''
 path    = '/path-to-DSO1-dataset/'
 gt_path = '/path-to-DSO1-masks/'
-path    = '/nas/big_folder/fabrizio.guillaro/outputs/PROVA_GITHUB_test/DSO-1/prova_test/'
-gt_path = '/nas/cheapfakes_datasets/tame/DSO-1/DSO-1-Fake-Images-Masks/'
 
 from glob import glob
 from tqdm import tqdm
