@@ -1,0 +1,69 @@
+Forgery/Forgery_Siena_DSC_0013_70.jpg,masks/Forgery_Siena_DSC_0013_70.png
+Forgery/Forgery_salotto.jpg,masks/Forgery_salotto.png
+Forgery/Forgery_pranzo.jpg,masks/Forgery_pranzo.png
+Forgery/Forgery_mercedes.jpg,masks/Forgery_mercedes.png
+Forgery/Forgery_Mcadams.jpg,masks/Forgery_Mcadams.png
+Forgery/Forgery_keira.jpg,masks/Forgery_keira.png
+Forgery/Forgery_JPGDisall_9.jpg,masks/Forgery_JPGDisall_9.png
+Forgery/Forgery_JPGDisall_8.jpg,masks/Forgery_JPGDisall_8.png
+Forgery/Forgery_JPGDisall_7.jpg,masks/Forgery_JPGDisall_7.png
+Forgery/Forgery_JPGDisall_6.jpg,masks/Forgery_JPGDisall_6.png
+Forgery/Forgery_JPGDisall_5.jpg,masks/Forgery_JPGDisall_5.png
+Forgery/Forgery_JPGDisall_4.jpg,masks/Forgery_JPGDisall_4.png
+Forgery/Forgery_JPGDisall_3.jpg,masks/Forgery_JPGDisall_3.png
+Forgery/Forgery_JPGDisall_2.jpg,masks/Forgery_JPGDisall_2.png
+Forgery/Forgery_JPGDisall_10.jpg,masks/Forgery_JPGDisall_10.png
+Forgery/Forgery_JPGDisall_1.jpg,masks/Forgery_JPGDisall_1.png
+Forgery/Forgery_JPGCin_image-9.jpg,masks/Forgery_JPGCin_image-9.png
+Forgery/Forgery_JPGCin_image-8.jpg,None
+Forgery/Forgery_JPGCin_image-7.jpg,masks/Forgery_JPGCin_image-7.png
+Forgery/Forgery_JPGCin_image-6.jpg,masks/Forgery_JPGCin_image-6.png
+Forgery/Forgery_JPGCin_image-5.jpg,masks/Forgery_JPGCin_image-5.png
+Forgery/Forgery_JPGCin_image-4.jpg,masks/Forgery_JPGCin_image-4.png
+Forgery/Forgery_JPGCin_image-3.jpg,masks/Forgery_JPGCin_image-3.png
+Forgery/Forgery_JPGCin_image-2.jpg,masks/Forgery_JPGCin_image-2.png
+Forgery/Forgery_JPGCin_image-10.jpg,masks/Forgery_JPGCin_image-10.png
+Forgery/Forgery_JPGCin_image-1.jpg,masks/Forgery_JPGCin_image-1.png
+Forgery/Forgery_JPGAllin_9.jpg,masks/Forgery_JPGAllin_9.png
+Forgery/Forgery_JPGAllin_8.jpg,masks/Forgery_JPGAllin_8.png
+Forgery/Forgery_JPGAllin_7.jpg,masks/Forgery_JPGAllin_7.png
+Forgery/Forgery_JPGAllin_6.jpg,masks/Forgery_JPGAllin_6.png
+Forgery/Forgery_JPGAllin_5.jpg,masks/Forgery_JPGAllin_5.png
+Forgery/Forgery_JPGAllin_4.jpg,masks/Forgery_JPGAllin_4.png
+Forgery/Forgery_JPGAllin_3.jpg,masks/Forgery_JPGAllin_3.png
+Forgery/Forgery_JPGAllin_2.jpg,masks/Forgery_JPGAllin_2.png
+Forgery/Forgery_JPGAllin_10.jpg,masks/Forgery_JPGAllin_10.png
+Forgery/Forgery_JPGAllin_1.jpg,masks/Forgery_JPGAllin_1.png
+Forgery/Forgery_gruppo.jpg,None
+Forgery/Forgery_Fotomontaggio-02 copia.jpg,masks/Forgery_Fotomontaggio-02 copia.png
+Forgery/Forgery_fotomontaggio 1.jpg,None
+Forgery/Forgery_final.jpg,masks/Forgery_final.png
+Forgery/Forgery_final copia.jpg,masks/Forgery_final copia.png
+Forgery/Forgery_final copia 2.jpg,masks/Forgery_final copia 2.png
+Forgery/Forgery_final 9.jpg,masks/Forgery_final 9.png
+Forgery/Forgery_final 8.jpg,masks/Forgery_final 8.png
+Forgery/Forgery_final 7.jpg,masks/Forgery_final 7.png
+Forgery/Forgery_final 6.jpg,masks/Forgery_final 6.png
+Forgery/Forgery_final 5.jpg,masks/Forgery_final 5.png
+Forgery/Forgery_final 4.jpg,masks/Forgery_final 4.png
+Forgery/Forgery_final 3.jpg,masks/Forgery_final 3.png
+Forgery/Forgery_final 2.jpg,masks/Forgery_final 2.png
+Forgery/Forgery_final 17.jpg,masks/Forgery_final 17.png
+Forgery/Forgery_final 16.jpg,masks/Forgery_final 16.png
+Forgery/Forgery_final 15.jpg,masks/Forgery_final 15.png
+Forgery/Forgery_final 14.jpg,masks/Forgery_final 14.png
+Forgery/Forgery_final 13.jpg,masks/Forgery_final 13.png
+Forgery/Forgery_final 12.jpg,masks/Forgery_final 12.png
+Forgery/Forgery_final 11.jpg,masks/Forgery_final 11.png
+Forgery/Forgery_final 10.jpg,masks/Forgery_final 10.png
+Forgery/Forgery_DSC_7745_edited.jpg,masks/Forgery_DSC_7745_edited.png
+Forgery/Forgery_DPP8_TIFF0396_final.jpg,masks/Forgery_DPP8_TIFF0396_final.png
+Forgery/Forgery_DPP8_TIFF0393_90.jpg,None
+Forgery/Forgery_DPP8_TIFF0393_75.jpg,masks/Forgery_DPP8_TIFF0393_75.png
+Forgery/Forgery_DPP8_TIFF0393_70.jpg,None
+Forgery/Forgery_DPP8_TIFF0382_90.jpg,masks/Forgery_DPP8_TIFF0382_90.png
+Forgery/Forgery_coppia.jpg,masks/Forgery_coppia.png
+Forgery/Forgery_bullock.jpg,masks/Forgery_bullock.png
+Forgery/Forgery_Aguilera.jpg,masks/Forgery_Aguilera.png
+Forgery/Forgery_4.jpg,None
+Forgery/Forgery_02.jpg,None
