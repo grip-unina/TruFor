@@ -85,6 +85,11 @@ When computing F1 score, we take the maximum between the F1 using the localizati
 We do not consider pixels close to the borders of the forged area in the ground truth, since in most cases they are not accurate. 
 
 
+## CocoGlide dataset
+
+You can download the CocoGlide dataset [here](https://www.grip.unina.it/download/prog/TruFor/CocoGlide.zip).
+
+
 ## License
 
 Copyright (c) 2023 Image Processing Research Group of University Federico II of Naples ('GRIP-UNINA'). 
