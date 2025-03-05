@@ -11,7 +11,8 @@ Official PyTorch implementation of the paper "TruFor: Leveraging all-round clues
 </p>
 
 ## News
-
+*   TODO: release Noiseprint++ training code
+*   2025-03-05: Training code is now available
 *   2023-06-28: Test code is now available
 *   2023-02-27: Paper has been accepted at CVPR 2023
 *   2022-12-21: Paper has been uploaded on arXiv
@@ -29,60 +30,12 @@ Official PyTorch implementation of the paper "TruFor: Leveraging all-round clues
 We cast the forgery localization task as a supervised binary segmentation problem, combining high-level (**RGB**) and low-level (**Noiseprint++**) features using a cross-modal framework.
 
 
-## Setup (docker)
+## Docker Setup (inference only)
 
-Go in the test_docker folder and run the following command:
-```
-bash docker_build.sh
-```
-
-This command will also automatically download the [weights](https://www.grip.unina.it/download/prog/TruFor/TruFor_weights.zip) and unzip them in the "test_docker/weights" folder. 
-MD5 is 7bee48f3476c75616c3c5721ab256ff8.
+Follow the instructions in the README.md in the test_docker folder.
 
 
 
-## Usage
-
-To run all images in "images/" directory, run:
-```
-bash docker_run.sh
-```
-
-You can change the following parameters in docker_run.sh:
-- *-gpu*: default is gpu '0'. Put '-1' if you want to use cpu.
-- *-in*:  default is "images/"
- is used and the input folder is "images/". It can be a single file (data/tampered1.png), a directory (data/) or a glob statement (data/*.png)
-- If you want to save the Noiseprint++ aswell, you can add the flag ```--save_np``` at the end of the command.
-
-The output is a .npz containing the following files:
-- *'map'*: anomaly localization map
-- *'conf'*: confidence map
-- *'score'*: score in the range [0,1]
-- *'np++'*: Noiseprint++ (if flag ```--save_np``` was specified)
-- *'imgsize'*: size of the image
-
-Note: if the output file already exists, it is not overwritten and it is skipped
-
-Note: that the score values can slightly change when a different version of python, pytorch, cuda, cudnn, or other libraries changes.
-
-
-## Visualization
-
-To visualize the output for an image, run the following:
-```
-python visualize.py --image image_path --output output_path [--mask mask_path]
-```
-Providing the mask is optional.
-
-Note that ```matplotlib``` and ```pillow``` packages are required to run this script.
-
-
-## Metrics
-
-In the file ```metrics.py``` you can find the functions we used to compute the metrics. <br/>
-Localization metrics have to be computed only on fake images, and the ground truth **has to be 0 for pristine pixels and 1 for forged pixels**. <br/>
-When computing F1 score, we take the maximum between the F1 using the localization map and the F1 using the inverse of the localization map.
-We do not consider pixels close to the borders of the forged area in the ground truth, since in most cases they are not accurate. 
 
 
 ## CocoGlide dataset

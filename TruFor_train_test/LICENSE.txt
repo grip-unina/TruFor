@@ -1,0 +1,31 @@
+THIS DOCUMENT CONSTITUTES A LICENCE TO USE THE SOFTWARE ON THE TERMS AND CONDITIONS APPEARING BELOW.
+
+
+Preamble
+
+This License applies to the software with which this license is distributed.
+The software is intellectual property of Image Processing Research Group of University Federico II of Naples ('GRIP-UNINA')
+and is placed under the protection of copyright laws, including Italian legislation and international treaties.
+BY USING THE PROGRAM, YOU INDICATE YOUR ACCEPTANCE OF THIS LICENSE TO DO SO.
+
+
+Terms and Conditions
+
+Reproduction, modification, and usage of the software covered by this license is allowed free of charge provided that:
+(i) this software should be used, reproduced and modified only for informational and nonprofit purposes; any unauthorized use of this software for industrial or profit-oriented activities is expressly prohibited; and
+(ii) any reproduction or modification retains all original notices including proprietary or copyright notices; and
+(iii) reference to the original authors is given whenever results, which arise from the use of this software or any modification of it, are made public.
+No other use of the materials and of any information incorporated thereto is hereby authorized.
+In addition, be informed that some names are protected by trademarks which are the property of GRIP-UNINA, its researchers and/or other third parties whether a specific mention in that respect is made or not.
+
+
+Disclaimers
+
+This software is provided 'as-is', without any express or implied warranty.
+In no event will the authors be held liable for any damages arising from the use of this software.
+
+
+Transmission of user information
+
+Any and all information or request for information you may direct to GRIP
+through e-mail as may be linked to website http://www.grip.unina.it/ 
