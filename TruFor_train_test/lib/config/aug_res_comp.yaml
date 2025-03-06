@@ -1,0 +1,15 @@
+__version__: 1.2.1
+transform:
+  __class_fullname__: Compose
+  transforms:
+  - __class_fullname__: RandomScale
+    p: 0.5
+    interpolation: 1
+    scale_limit:
+    - -0.5
+    - 0.5
+
+  - __class_fullname__: JpegCompression
+    p: 0.5
+    quality_lower: 30
+    quality_upper: 100

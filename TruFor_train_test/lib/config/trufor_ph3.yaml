@@ -1,0 +1,50 @@
+CUDNN:
+  BENCHMARK: false
+  DETERMINISTIC: false
+  ENABLED: false
+WORKERS: 16
+
+DATASET:
+  TRAIN: [IMD, FR, CA, COCO, RAISE]
+  VALID: [IMD, FR, CA, COCO, RAISE]
+  NUM_CLASSES: 2
+  CLASS_WEIGHTS: [0.5, 2.5]
+MODEL:
+  NAME: detconfcmx
+  PRETRAINED:
+  MODS: ('RGB','NP++')
+  EXTRA:
+      BACKBONE: mit_b2
+      DECODER: MLPDecoder
+      DECODER_EMBED_DIM: 512
+      PREPRC: 'imagenet'
+      BN_EPS: 0.001
+      BN_MOMENTUM: 0.1
+      NP_WEIGHTS:
+      MODULES: ['NP++','backbone','loc_head','conf_head','det_head']
+      FIX_MODULES: ['NP++','backbone','loc_head']
+      DETECTION: 'confpool'
+LOSS:
+  LOSSES:
+    - ['CONF', 1.0, 'mse']
+    - ['DET',0.5,'cross_entropy']
+  SMOOTH: 0
+TRAIN:
+  PRETRAINING: 'weights/trufor_ph2/best.pth.tar'
+  IMAGE_SIZE: [512,512]
+  BATCH_SIZE_PER_GPU: 18
+  SHUFFLE: true
+  BEGIN_EPOCH: 0
+  END_EPOCH: 100
+  OPTIMIZER: sgd
+  LR: 0.005
+  WD: 0.0005
+  MOMENTUM: 0.9
+  NESTEROV: false
+  IGNORE_LABEL: -1
+  AUG: 'lib/config/aug_res_comp.yaml'
+VALID:
+  FIRST_VALID: true
+  MAX_SIZE: 2048
+  BEST_KEY: 'avg_det_bacc'
+  AUG: 'lib/config/aug_res_comp.yaml'
