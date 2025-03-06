@@ -32,10 +32,11 @@ We cast the forgery localization task as a supervised binary segmentation proble
 
 ## Docker Setup (inference only)
 
-Follow the instructions in the README.md in the test_docker folder.
+Follow the instructions in the README.md in the `test_docker` folder.
 
+## Training and inference
 
-
+Follow the instructions in the README.md in the `TruFor_train_test` folder.
 
 
 ## CocoGlide dataset
