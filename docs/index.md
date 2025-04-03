@@ -63,7 +63,8 @@ Errors in the anomaly map are corrected by the confidence map, drastically impro
 <center> <img src="./qualitative.png" alt="examples" width="80%" /> </center>
 
 ## News
-
+*   TODO: release Noiseprint++ training code
+*   2025-03-05: Training code is now available
 *   2023-06-28: Test code is now available
 *   2023-02-27: Paper has been accepted at CVPR 2023
 *   2022-12-21: Paper has been uploaded on arXiv
