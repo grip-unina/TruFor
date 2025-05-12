@@ -231,8 +231,10 @@ def validate(config, testloader, model, writer_dict, valid_set="valid"):
     mean_IoU_smooth = IoU_array_smooth.mean()                      # mean of the classes IoU      
     
     print_loss = avg_loss.average()
-    bacc = (avg_det_tpr.average()+avg_det_tnr.average())/2
-
+    try:
+        bacc = (avg_det_tpr.average()+avg_det_tnr.average())/2
+    except:
+        bacc = 0
     writer = writer_dict['writer']
     global_steps = writer_dict['valid_global_steps']
 
