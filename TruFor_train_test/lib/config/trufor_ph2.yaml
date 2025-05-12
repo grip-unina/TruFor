@@ -44,5 +44,5 @@ TRAIN:
 VALID:
   FIRST_VALID: false
   MAX_SIZE: 2048
-  BEST_KEY: 'avg_mIoU'
+  BEST_KEY: 'avg_p-F1_smooth'
   AUG: 'lib/config/aug_res_comp.yaml'
