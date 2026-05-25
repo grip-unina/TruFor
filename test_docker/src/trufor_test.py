@@ -29,7 +29,7 @@ if path not in sys.path:
 
 from config import update_config
 from config import _C as config
-from data_core import myDataset
+from data_core import myDataset, collate_skip_failed
 
 parser = argparse.ArgumentParser(description='Test TruFor')
 parser.add_argument('-gpu', '--gpu', type=int, default=0, help='device, use -1 for cpu')
@@ -37,6 +37,9 @@ parser.add_argument('-in', '--input', type=str, default='../images',
                     help='can be a single file, a directory or a glob statement')
 parser.add_argument('-out', '--output', type=str, default='../output', help='output folder')
 parser.add_argument('-save_np', '--save_np', action='store_true', help='whether to save the Noiseprint++ or not')
+parser.add_argument('-max_size', '--max_size', type=int, default=None,
+                    help='if set, resize each input proportionally so its longest side is at most this many '
+                         'pixels (useful to avoid CUDA OOM on large images); default is no resizing')
 parser.add_argument('opts', help="other options", default=None, nargs=argparse.REMAINDER)
 
 args = parser.parse_args()
@@ -69,11 +72,12 @@ elif os.path.isdir(input):
 else:
     raise ValueError("input is neither a file or a folder")
 
-test_dataset = myDataset(list_img=list_img)
+test_dataset = myDataset(list_img=list_img, max_size=args.max_size)
 
 testloader = torch.utils.data.DataLoader(
     test_dataset,
-    batch_size=1)  # 1 to allow arbitrary input sizes
+    batch_size=1,  # 1 to allow arbitrary input sizes
+    collate_fn=collate_skip_failed)
 
 if config.TEST.MODEL_FILE:
     model_state_file = config.TEST.MODEL_FILE
@@ -93,7 +97,11 @@ model.load_state_dict(checkpoint['state_dict'])
 model = model.to(device)
 
 with torch.no_grad():
-    for index, (rgb, path) in enumerate(tqdm(testloader)):
+    for index, batch in enumerate(tqdm(testloader)):
+        if batch is None:
+            # All items in this batch failed to load; a warning was already emitted by the dataset.
+            continue
+        rgb, path = batch
         # filename_img = test_dataset.get_filename(index)
 
         if os.path.splitext(os.path.basename(output))[1] == '':  # output is a directory
