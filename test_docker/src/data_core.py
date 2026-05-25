@@ -14,7 +14,9 @@ Created in September 2022
 @author: fabrizio.guillaro
 """
 
+import sys
 from torch.utils.data import Dataset
+from torch.utils.data._utils.collate import default_collate
 import random
 import numpy as np
 import torch
@@ -36,15 +38,19 @@ class myDataset(Dataset):
         assert self.tamp_list
         assert 0 <= index < len(self.tamp_list), f"Index {index} is not available!"
         rgb_path = self.tamp_list[index]
-        img = Image.open(rgb_path).convert("RGB")
-        if self.max_size is not None:
-            w, h = img.size
-            longest = max(w, h)
-            if longest > self.max_size:
-                scale = self.max_size / longest
-                new_size = (max(1, int(round(w * scale))), max(1, int(round(h * scale))))
-                img = img.resize(new_size, Image.BILINEAR)
-        img_RGB = np.array(img)
+        try:
+            img = Image.open(rgb_path).convert("RGB")
+            if self.max_size is not None:
+                w, h = img.size
+                longest = max(w, h)
+                if longest > self.max_size:
+                    scale = self.max_size / longest
+                    new_size = (max(1, int(round(w * scale))), max(1, int(round(h * scale))))
+                    img = img.resize(new_size, Image.BILINEAR)
+            img_RGB = np.array(img)
+        except Exception as e:
+            print(f"[warning] Skipping {rgb_path}: {type(e).__name__}: {e}", file=sys.stderr)
+            return None
         return torch.tensor(img_RGB.transpose(2, 0, 1), dtype=torch.float) / 256.0, rgb_path
 
     def get_filename(self, index):
@@ -53,4 +59,15 @@ class myDataset(Dataset):
             return item[0]
         else:
             return item
+
+
+def collate_skip_failed(batch):
+    """Drop items where __getitem__ returned None (image failed to load).
+
+    Returns None if every item in the batch failed, so the caller can skip the iteration.
+    """
+    batch = [b for b in batch if b is not None]
+    if not batch:
+        return None
+    return default_collate(batch)
 

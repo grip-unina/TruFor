@@ -29,7 +29,7 @@ if path not in sys.path:
 
 from config import update_config
 from config import _C as config
-from data_core import myDataset
+from data_core import myDataset, collate_skip_failed
 
 parser = argparse.ArgumentParser(description='Test TruFor')
 parser.add_argument('-gpu', '--gpu', type=int, default=0, help='device, use -1 for cpu')
@@ -76,7 +76,8 @@ test_dataset = myDataset(list_img=list_img, max_size=args.max_size)
 
 testloader = torch.utils.data.DataLoader(
     test_dataset,
-    batch_size=1)  # 1 to allow arbitrary input sizes
+    batch_size=1,  # 1 to allow arbitrary input sizes
+    collate_fn=collate_skip_failed)
 
 if config.TEST.MODEL_FILE:
     model_state_file = config.TEST.MODEL_FILE
@@ -96,7 +97,11 @@ model.load_state_dict(checkpoint['state_dict'])
 model = model.to(device)
 
 with torch.no_grad():
-    for index, (rgb, path) in enumerate(tqdm(testloader)):
+    for index, batch in enumerate(tqdm(testloader)):
+        if batch is None:
+            # All items in this batch failed to load; a warning was already emitted by the dataset.
+            continue
+        rgb, path = batch
         # filename_img = test_dataset.get_filename(index)
 
         if os.path.splitext(os.path.basename(output))[1] == '':  # output is a directory
