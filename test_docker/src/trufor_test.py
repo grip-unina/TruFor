@@ -37,6 +37,9 @@ parser.add_argument('-in', '--input', type=str, default='../images',
                     help='can be a single file, a directory or a glob statement')
 parser.add_argument('-out', '--output', type=str, default='../output', help='output folder')
 parser.add_argument('-save_np', '--save_np', action='store_true', help='whether to save the Noiseprint++ or not')
+parser.add_argument('-max_size', '--max_size', type=int, default=None,
+                    help='if set, resize each input proportionally so its longest side is at most this many '
+                         'pixels (useful to avoid CUDA OOM on large images); default is no resizing')
 parser.add_argument('opts', help="other options", default=None, nargs=argparse.REMAINDER)
 
 args = parser.parse_args()
@@ -69,7 +72,7 @@ elif os.path.isdir(input):
 else:
     raise ValueError("input is neither a file or a folder")
 
-test_dataset = myDataset(list_img=list_img)
+test_dataset = myDataset(list_img=list_img, max_size=args.max_size)
 
 testloader = torch.utils.data.DataLoader(
     test_dataset,
